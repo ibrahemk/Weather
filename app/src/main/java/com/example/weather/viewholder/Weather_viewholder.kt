@@ -39,10 +39,7 @@ class Weather_viewholder (itemView: View,var model:My_weather_model) : RecyclerV
     fun handleui(weather: Weather){
       mainwea!!.text=weather.mainwea
         des!!.text=weather.description
-        temp!!.setOnClickListener(View.OnClickListener {
-            Toast.makeText(model.activity, "No internet connection", Toast.LENGTH_LONG).show()
 
-        })
         if (model.temptype == "metric") {
             temp!!.text = "${weather.temp} C"
             maxmintemp!!.text = "${weather.temp_min}/${weather.temp_max} C"
